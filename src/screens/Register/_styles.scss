@@ -1,0 +1,44 @@
+.SelectHobbies__container {
+  text-align: center;
+  padding: 0 40px;
+  .SelectHobbies__submit__button {
+    width: 100%;
+  }
+}
+.Hobbies__container {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-gap: 50px 0;
+  justify-content: center;
+  .Hobbie__card__container {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+    .Hobbie__card__box {
+      cursor: pointer;
+      border-radius: 50%;
+      width: 100px;
+      padding: 30px;
+      height: auto;
+      margin: auto;
+      &:hover {
+        color: #fff;
+        background-color: #461d63;
+      }
+      &:active {
+        transform: scale(0.8);
+        transition: 0.3s;
+      }
+    }
+    .Hobbie__card__box__active {
+      background-color: #461d63;
+      color: #fff;
+    }
+    .Hobbie__card__image {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

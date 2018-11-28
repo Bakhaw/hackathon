@@ -1,14 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Form from './Form';
+import LayoutContainer from '../../components/LayoutContainer';
+import SelectHobbies from './SelectHobbies';
+import SubmitRegistration from './SubmitRegistration';
 
-function Register() {
-  return (
-    <div>
-      <p>Inscription</p>
-      <Form />
-    </div>
-  );
+class Register extends Component {
+  state = {
+    registerStep: 3
+  };
+
+  handleNext = () => {
+    this.setState(state => ({ registerStep: state.registerStep + 1 }));
+  };
+
+  render() {
+    const { registerStep } = this.state;
+    return (
+      <LayoutContainer>
+        <div className='Register__container'>
+          <h1>Inscription</h1>
+          {registerStep === 1 && <Form handleNext={this.handleNext} />}
+          {registerStep === 2 && <SelectHobbies handleNext={this.handleNext} />}
+          {registerStep === 3 && <SubmitRegistration />}
+        </div>
+      </LayoutContainer>
+    );
+  }
 }
 
 export default Register;

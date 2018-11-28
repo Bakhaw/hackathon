@@ -10,7 +10,7 @@ function Router() {
       <Fragment>
         <Switch>
           <Route path='/register' component={Register} />
-          <Route path='/' component={Home} />
+          <Route path='/home' component={Home} />
         </Switch>
       </Fragment>
     </HashRouter>
