@@ -9,7 +9,7 @@ import SelectHour from './SelectHour';
 
 class Home extends Component {
   state = {
-    step: 1
+    step: 2
   };
 
   handleNext = () => {

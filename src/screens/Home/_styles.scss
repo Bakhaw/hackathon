@@ -110,3 +110,34 @@
     margin-left: 10px;
   }
 }
+
+.SelectMode__container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.random__button {
+  background-color: #fff;
+  min-width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  border-radius: 15px;
+  background: #fff;
+  color: $grey;
+  padding: 12px 15px;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 10px;
+  p {
+    margin: 0;
+  }
+}
+
+.selectPerson__button {
+  background: $bluegreen;
+
+}

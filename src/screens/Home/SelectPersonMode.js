@@ -8,16 +8,19 @@ class SelectPersonMode extends Component {
     const { handleRandom, handleSelectPerson } = this.props;
     return (
       <Container title='Avec qui ?'>
-        <Button
-          onClick={handleRandom}
-          className='SelectPersonMode__button'
-          text='RANDOM'
+        <div className='SelectMode__container'>
+          <Button
+            onClick={handleRandom}
+            className='random__button'
+            text='RANDOM'
+            chevron
+            />
+          <Button
+            onClick={handleSelectPerson}
+            className='random__button selectPerson__button'
+            text='JE CHOISIS'
           />
-        <Button
-          onClick={handleSelectPerson}
-          className='SelectPersonMode__button'
-          text='JE CHOISIS'
-        />
+        </div>
       </Container>
     );
   }

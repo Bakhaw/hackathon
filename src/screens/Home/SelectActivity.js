@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Button from '../../components/Button';
 import Container from '../../components/Container';
+import Footer from '../../components/Footer';
+
 
 const baseImgPath = 'src/assets/icones-activities';
 
@@ -30,7 +31,7 @@ class SelectActivity extends Component {
 
   render() {
     const { selectedActivity } = this.state;
-    const { handleNext } = this.props;
+    const { handleNext, handlePrev } = this.props;
     return (
       <div className='SelectActivities__container'>
         <Container title='Tu veux faire quoi?'>
@@ -57,6 +58,7 @@ class SelectActivity extends Component {
             })}
           </div>
         </Container>
+        <Footer chevronLeft chevronRight handleNext={handleNext} handlePrev={handlePrev} />
       </div>
     );
   }
