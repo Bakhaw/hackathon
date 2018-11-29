@@ -1,0 +1,10 @@
+.Container {
+  text-align: center;
+  min-height: 100vh;
+  background: $grey;
+  .Container__title {
+    color: #fff;
+    font-family: $pacifico;
+    font-weight: normal;
+  }
+}
