@@ -5,25 +5,11 @@ import Input from '../../components/Input';
 
 import { withContext } from '../../Context';
 
-const FormFields = [
-  {
-    name: 'name',
-    type: 'text'
-  },
-  {
-    name: 'email',
-    type: 'email'
-  },
-  {
-    name: 'password',
-    type: 'password'
-  }
-];
-
 class Form extends Component {
   state = {
     email: '',
-    name: '',
+    firstname: '',
+    lastname: '',
     password: ''
   };
 
@@ -32,28 +18,25 @@ class Form extends Component {
   };
 
   handleFormSubmit = async () => {
-    const { name, email } = this.state;
-    await this.props.contextActions.handleRegisterSubmit({ email, name });
+    const { email, firstname, lastname } = this.state;
+    await this.props.contextActions.handleRegisterSubmit({ email, firstname, lastname });
     await this.props.handleNext();
   };
 
   render() {
+    const { email, firstname, lastname, password } = this.state;
     return (
-      <>
-        {FormFields.map((field, index) => {
-          const { name, type } = field;
-          return (
-            <Input
-              key={index}
-              name={name}
-              onChange={this.handleInputChange}
-              type={type}
-              value={this.state[name]}
-            />
-          );
-        })}
+      <div className='Form__container'>
+        <div className='Form__custom__row'>
+          <Input label='Nom' name='lastname' onChange={this.handleInputChange} type='text' value={lastname} />
+          <Input label='Prénom' name='firstname' onChange={this.handleInputChange} type='text' value={firstname} />
+        </div>
+
+        <Input label='E-mail' name='email' onChange={this.handleInputChange} type='email' value={email} />
+        <Input label='Mot de passe' name='password' onChange={this.handleInputChange} type='password' value={password} />
+
         <Button onClick={this.handleFormSubmit} text='Suivant' />
-      </>
+      </div>
     );
   }
 }

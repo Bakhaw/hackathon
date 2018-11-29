@@ -2,15 +2,14 @@ import React, { Component, createContext } from 'react';
 
 const { Consumer, Provider } = createContext();
 
-export const withContext = Comp => props => (
-  <Consumer>{context => <Comp {...context} {...props} />}</Consumer>
-);
+export const withContext = Comp => props => <Consumer>{context => <Comp {...context} {...props} />}</Consumer>;
 
 export class MyProvider extends Component {
   state = {
     user: {
       email: '',
-      name: ''
+      firstname: '',
+      lastame: ''
     },
     hobbies: []
   };
