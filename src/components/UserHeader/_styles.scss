@@ -1,0 +1,15 @@
+.UserHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  .UserHeader__logo {
+    width: 80px;
+    height: 80px;
+  }
+  .UserHeader__avatar {
+    width: 100px;
+    height: 100px;
+    border: 10px solid $purple;
+    border-radius: 50%;
+  }
+}

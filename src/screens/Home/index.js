@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
-import Header from '../../components/Header';
 import SelectActivty from '../Home/SelectActivity';
 import SelectPersonMode from '../Home/SelectPersonMode';
 import SelectPersons from './SelectPersons';
 import Random from '../Home/Random';
 import SelectHour from './SelectHour';
+import UserHeader from '../../components/UserHeader';
 
 class Home extends Component {
   state = {
-    step: 5
+    step: 1
   };
 
   handleNext = () => {
@@ -36,6 +36,7 @@ class Home extends Component {
     const { step } = this.state;
     return (
       <div>
+        <UserHeader />
         {step === 1 && <SelectActivty handleNext={this.handleNext} />}
         {step === 2 && <SelectPersonMode handleSelectPerson={this.handleSelectPerson} handleRandom={this.handleRandom} />}
         {step === 4 && <SelectPersons handleNext={this.handleSelectHour} handlePrev={this.handlePrev} />}

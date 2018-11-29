@@ -1,10 +1,11 @@
 .Container {
   text-align: center;
-  min-height: 100vh;
+  min-height: 80vh;
   background: $grey;
   .Container__title {
     color: #fff;
     font-family: $pacifico;
     font-weight: normal;
+    margin: 0;
   }
 }

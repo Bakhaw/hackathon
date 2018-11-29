@@ -104,3 +104,17 @@
     margin-left: 10px;
   }
 }
+
+.SelectHour__container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  select {
+    background: #fff;
+    padding: 15px;
+    color: $grey;
+    font-size: 30px;
+  }
+}
