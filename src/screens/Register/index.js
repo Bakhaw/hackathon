@@ -8,7 +8,7 @@ import Header from '../../components/Header';
 
 class Register extends Component {
   state = {
-    registerStep: 3
+    registerStep: 1
   };
 
   handleNext = () => {

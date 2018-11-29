@@ -1,9 +1,10 @@
 import React from 'react';
-
-function Button({ className, onClick, text }) {
+import DoubleChevronRight from '../../assets/pictos-layout/double_fleche.png';
+function Button({ chevron, className, onClick, text }) {
   return (
     <button className={className} onClick={onClick}>
-      {text}
+      <p>{text}</p>
+      {chevron && <img className='Button__double-chevron' src={DoubleChevronRight} />}
     </button>
   );
 }
