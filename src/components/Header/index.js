@@ -1,10 +1,10 @@
 import React from 'react';
-import PreviousButton from '../PreviousButton';
+import HippinLogo from '../../assets/pictos-layout/logo_hippin.png';
 
-function Header({ onClick, step, title }) {
+function Header({ title }) {
   return (
-    <div className='Header'>
-      {step > 1 && <PreviousButton onClick={onClick} />}
+    <div className='Header__container'>
+      <img className='Header__logo' src={HippinLogo} />
       <h1 className='Header__title'>{title}</h1>
     </div>
   );

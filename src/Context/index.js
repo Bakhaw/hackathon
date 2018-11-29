@@ -9,7 +9,8 @@ export class MyProvider extends Component {
     user: {
       email: '',
       firstname: '',
-      lastame: ''
+      lastame: '',
+      sex: ''
     },
     hobbies: []
   };

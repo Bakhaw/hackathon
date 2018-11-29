@@ -3,27 +3,46 @@
 }
 
 .Form__container {
+  width: 75%;
+  margin: auto;
   padding: 20px;
   .Form__custom__row {
     display: grid;
     grid-template-columns: repeat(2, calc((100% / 2) - 5px));
     grid-gap: 0 10px;
   }
+  .Form__choose-sex {
+    display: flex;
+    justify-content: space-around;
+  }
+  .Form__chevron-right__container {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .SelectHobbies__container {
   text-align: center;
   padding: 0 40px;
-  .SelectHobbies__submit__button {
-    width: 100%;
+  .SelectHobbies__title {
+    color: white;
+    font-family: $pacifico;
+    font-weight: normal;
+  }
+  .Hobbies__chevron-right__container {
+    display: flex;
+    justify-content: flex-end;
+    transform: translate(5px, -45px);
   }
 }
 
 .Hobbies__container {
+  background: $white;
+  border-radius: 5px;
   margin: 20px 0;
   display: grid;
-  grid-template-columns: repeat(3, 33.333vw);
-  grid-gap: 50px 0;
+  grid-template-columns: repeat(3, 30vw);
+  grid-gap: 20px 0;
   justify-content: center;
   .Hobbie__card__container {
     text-align: center;

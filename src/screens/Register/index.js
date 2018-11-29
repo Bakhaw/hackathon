@@ -8,7 +8,7 @@ import Header from '../../components/Header';
 
 class Register extends Component {
   state = {
-    registerStep: 1
+    registerStep: 3
   };
 
   handleNext = () => {
@@ -24,7 +24,7 @@ class Register extends Component {
     return (
       <LayoutContainer>
         <div className='Register__container'>
-          <Header title='INSCRIPTION' onClick={this.handlePrev} step={registerStep} />
+          <Header title='INSCRIPTION' />
           {registerStep === 1 && <Form handleNext={this.handleNext} />}
           {registerStep === 2 && <SelectHobbies handleNext={this.handleNext} />}
           {registerStep === 3 && <SubmitRegistration />}

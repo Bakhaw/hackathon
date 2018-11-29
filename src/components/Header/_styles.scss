@@ -1,10 +1,12 @@
-.Header {
+.Header__container {
+  height: 140px;
   background: $bluegreen;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  padding: 10px 0;
+  .Header__logo {
+    width: 200px;
+    height: 70px;
+  }
   .Header__title {
-    font-family: $futura;
     color: $grey;
-    grid-column: 4 / 10;
   }
 }

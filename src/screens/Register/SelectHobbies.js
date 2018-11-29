@@ -1,32 +1,32 @@
 import React, { Component } from 'react';
-import Button from '../../components/Button';
+import NextButton from '../../components/NextButton';
 
 const baseImgPath = 'src/assets/icones-hobbies';
 
 const Hobbies = [
   {
     img: `${baseImgPath}/apple.svg`,
-    text: 'Apple'
+    text: 'voyager'
   },
   {
     img: `${baseImgPath}/carrot.svg`,
-    text: 'Carrot'
+    text: 'lecture'
   },
   {
     img: `${baseImgPath}/strawberry.svg`,
-    text: 'Strawberry'
+    text: 'cuisine'
   },
   {
     img: `${baseImgPath}/pineapple.svg`,
-    text: 'Pineapple'
+    text: 'cinéma'
   },
   {
     img: `${baseImgPath}/meat.svg`,
-    text: 'Meat'
+    text: 'bricolage'
   },
   {
     img: `${baseImgPath}/fish.svg`,
-    text: 'Fish'
+    text: 'sport'
   }
 ];
 
@@ -42,9 +42,7 @@ class SelectHobbies extends Component {
       if (newState.selectedHobbies.length === 0) {
         newState.selectedHobbies.push(hobbie.text);
       } else {
-        const itemIndex = newState.selectedHobbies.findIndex(
-          x => x === hobbie.text
-        );
+        const itemIndex = newState.selectedHobbies.findIndex(x => x === hobbie.text);
 
         if (itemIndex === -1) {
           newState.selectedHobbies = [...newState.selectedHobbies, hobbie.text];
@@ -56,41 +54,19 @@ class SelectHobbies extends Component {
     });
   };
 
-  checkItemActive = hobbie => {
-    const { selectedHobbies } = this.state;
-
-    this.state.selectedHobbies.map(item => {
-      if (item.text === hobbie.text) {
-        console.log('true');
-        return true;
-      } else {
-        console.log('false');
-        return false;
-      }
-    });
-  };
-
   render() {
     const { selectedHobbies } = this.state;
     const { handleNext } = this.props;
     return (
       <div className='SelectHobbies__container'>
-        <h3>Centre d'interêts</h3>
+        <h1 className='SelectHobbies__title'>Centre d'interêts</h1>
         <div className='Hobbies__container'>
           {Hobbies.map((hobbie, index) => {
             const { img, text } = hobbie;
             const isHobbieActive = selectedHobbies.includes(text);
             return (
-              <div
-                className={`Hobbie__card__container`}
-                key={index}
-                onClick={() => this.handleSelectHobbie(hobbie)}
-              >
-                <div
-                  className={`Hobbie__card__box ${
-                    isHobbieActive ? 'Hobbie__card__box__active' : ''
-                  }`}
-                >
+              <div className='Hobbie__card__container' key={index} onClick={() => this.handleSelectHobbie(hobbie)}>
+                <div className={`Hobbie__card__box ${isHobbieActive ? 'Hobbie__card__box__active' : ''}`}>
                   <img className='Hobbie__card__image' src={img} />
                   <p>{text}</p>
                 </div>
@@ -98,11 +74,10 @@ class SelectHobbies extends Component {
             );
           })}
         </div>
-        <Button
-          className='SelectHobbies__submit__button'
-          onClick={handleNext}
-          text='Suivant'
-        />
+
+        <div className='Hobbies__chevron-right__container'>
+          <NextButton onClick={handleNext} />
+        </div>
       </div>
     );
   }

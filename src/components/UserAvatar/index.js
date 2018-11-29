@@ -1,8 +1,7 @@
 import React from 'react';
-import Avatar from '../../assets/user/avatar.svg';
 
-function UserAvatar() {
-  return <img className='UserAvatar' src={Avatar} />;
+function UserAvatar({ avatar, isActive, onClick }) {
+  return <img className={`UserAvatar ${isActive ? 'UserAvatar__active' : ''}`} onClick={onClick} src={avatar} />;
 }
 
 export default UserAvatar;
