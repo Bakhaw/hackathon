@@ -5,17 +5,17 @@ const baseImgPath = 'src/assets/icones-hobbies';
 
 const Activities = [
   {
-    img: `${baseImgPath}/apple.svg`,
-    text: 'Apple'
+    img: `${baseImgPath}/voyage.png`,
+    text: 'prendre un café'
   },
   {
-    img: `${baseImgPath}/carrot.svg`,
-    text: 'Carrot'
+    img: `${baseImgPath}/lecture.png`,
+    text: 'prendre l\'air'
   },
   {
-    img: `${baseImgPath}/strawberry.svg`,
-    text: 'Strawberry'
-  }
+    img: `${baseImgPath}/cuisine.png`,
+    text: 'pause déjeuner'
+  },
 ];
 
 class SelectActivity extends Component {
