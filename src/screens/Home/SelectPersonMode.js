@@ -4,7 +4,7 @@ import Button from '../../components/Button';
 class SelectPersonMode extends Component {
 
   render() {
-    const { handleNext } = this.props;
+    const { handleRandom, handleSelectPerson } = this.props;
     return (
       <div className='SelectPersonMode__container'>
         <Button
