@@ -1,4 +1,13 @@
+@import './layout';
+@import './colors';
 @import './imports';
+
+@font-face {
+  font-family: 'Futura Std Heavy';
+  src: url('/src/assets/fonts/Futura_Std_Heavy') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   padding: 0;

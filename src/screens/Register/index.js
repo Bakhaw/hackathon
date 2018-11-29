@@ -24,7 +24,7 @@ class Register extends Component {
     return (
       <LayoutContainer>
         <div className='Register__container'>
-          <Header title='Inscription' onClick={this.handlePrev} step={registerStep} />
+          <Header title='INSCRIPTION' onClick={this.handlePrev} step={registerStep} />
           {registerStep === 1 && <Form handleNext={this.handleNext} />}
           {registerStep === 2 && <SelectHobbies handleNext={this.handleNext} />}
           {registerStep === 3 && <SubmitRegistration />}

@@ -1,7 +1,10 @@
 .Header {
+  background: $bluegreen;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   .Header__title {
+    font-family: $futura;
+    color: $grey;
     grid-column: 4 / 10;
   }
 }
