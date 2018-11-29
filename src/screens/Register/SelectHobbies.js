@@ -5,27 +5,27 @@ const baseImgPath = 'src/assets/icones-hobbies';
 
 const Hobbies = [
   {
-    img: `${baseImgPath}/apple.svg`,
+    img: `${baseImgPath}/voyage.png`,
     text: 'voyager'
   },
   {
-    img: `${baseImgPath}/carrot.svg`,
+    img: `${baseImgPath}/lecture.png`,
     text: 'lecture'
   },
   {
-    img: `${baseImgPath}/strawberry.svg`,
+    img: `${baseImgPath}/cuisine.png`,
     text: 'cuisine'
   },
   {
-    img: `${baseImgPath}/pineapple.svg`,
+    img: `${baseImgPath}/cinema.png`,
     text: 'cinéma'
   },
   {
-    img: `${baseImgPath}/meat.svg`,
+    img: `${baseImgPath}/bricolage.png`,
     text: 'bricolage'
   },
   {
-    img: `${baseImgPath}/fish.svg`,
+    img: `${baseImgPath}/sport.png`,
     text: 'sport'
   }
 ];
@@ -66,8 +66,8 @@ class SelectHobbies extends Component {
             const isHobbieActive = selectedHobbies.includes(text);
             return (
               <div className='Hobbie__card__container' key={index} onClick={() => this.handleSelectHobbie(hobbie)}>
-                <div className={`Hobbie__card__box ${isHobbieActive ? 'Hobbie__card__box__active' : ''}`}>
-                  <img className='Hobbie__card__image' src={img} />
+                <div className='Hobbie__card__box'>
+                  <img className={`Hobbie__card__image ${isHobbieActive ? 'Hobbie__card__image__active' : ''}`} src={img} />
                   <p>{text}</p>
                 </div>
               </div>

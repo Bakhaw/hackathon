@@ -23,7 +23,7 @@
 
 .SelectHobbies__container {
   text-align: center;
-  padding: 0 40px;
+  padding: 20px 40px;
   .SelectHobbies__title {
     color: white;
     font-family: $pacifico;
@@ -32,23 +32,25 @@
   .Hobbies__chevron-right__container {
     display: flex;
     justify-content: flex-end;
-    transform: translate(5px, -45px);
   }
 }
 
 .Hobbies__container {
   background: $white;
   border-radius: 5px;
+  padding: 20px 0;
   margin: 20px 0;
   display: grid;
   grid-template-columns: repeat(3, 30vw);
   grid-gap: 20px 0;
   justify-content: center;
   .Hobbie__card__container {
-    text-align: center;
     height: 100%;
     width: 100%;
     transition: 0.3s;
+    p {
+      margin: 0;
+    }
     .Hobbie__card__box {
       cursor: pointer;
       border-radius: 50%;
@@ -56,13 +58,39 @@
       height: auto;
       margin: auto;
     }
-    .Hobbie__card__box__active {
-      background-color: #461d63;
-      color: #fff;
-    }
     .Hobbie__card__image {
-      width: 50px;
-      height: 50px;
+      width: 70px;
+      height: 70px;
+    }
+    .Hobbie__card__image__active {
+      border: 10px solid $bluegreen;
+      border-radius: 50%;
+    }
+  }
+}
+
+.SubmitRegistration {
+  .SubmitRegistration__title {
+    color: $white;
+    text-align: center;
+    font-family: $pacifico;
+    font-weight: normal;
+    font-size: 40px;
+  }
+  .SubmitRegistration__bulle-chat {
+    position: absolute;
+    transform: translate(-100px, -130px);
+    width: 300px;
+    height: 300px;
+  }
+  .SubmitRegistration__avatar {
+    display: flex;
+    justify-content: flex-start;
+    img {
+      border: 10px solid $purple;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
     }
   }
 }

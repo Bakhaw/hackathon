@@ -8,7 +8,7 @@ export class MyProvider extends Component {
   state = {
     user: {
       email: '',
-      firstname: '',
+      firstname: 'John',
       lastame: '',
       sex: ''
     },
