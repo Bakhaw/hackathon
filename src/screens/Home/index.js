@@ -5,10 +5,11 @@ import SelectActivty from '../Home/SelectActivity';
 import SelectPersonMode from '../Home/SelectPersonMode';
 import SelectPersons from './SelectPersons';
 import Random from '../Home/Random';
+import SelectHour from './SelectHour';
 
 class Home extends Component {
   state = {
-    step: 3
+    step: 5
   };
 
   handleNext = () => {
@@ -27,14 +28,19 @@ class Home extends Component {
     this.setState({ step: 4 });
   };
 
+  handleSelectHour = () => {
+    this.setState({ step: 5 });
+  };
+
   render() {
     const { step } = this.state;
     return (
       <div>
         {step === 1 && <SelectActivty handleNext={this.handleNext} />}
         {step === 2 && <SelectPersonMode handleSelectPerson={this.handleSelectPerson} handleRandom={this.handleRandom} />}
-        {step === 3 && <SelectPersons handleNext={this.handleNext} />}
-        {step === 4 && <Random handleNext={this.handleNext} />}
+        {step === 4 && <SelectPersons handleNext={this.handleSelectHour} handlePrev={this.handlePrev} />}
+        {/* {step === 4 && <Random handleNext={this.handleNext} />} */}
+        {step === 5 && <SelectHour handleNext={this.handleNext} handlePrev={this.handlePrev} />}
       </div>
     );
   }

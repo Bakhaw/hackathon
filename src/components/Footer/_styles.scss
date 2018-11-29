@@ -1,0 +1,16 @@
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  img {
+    width: 30px;
+    height: 100%;
+  }
+  .Footer__chevron-left {
+    display: flex;
+    color: #fff;
+  }
+  .Footer__chevron-right {
+    display: flex;
+    color: #fff;
+  }
+}

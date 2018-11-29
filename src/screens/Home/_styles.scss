@@ -94,3 +94,13 @@
     }
   }
 }
+
+.SelectPersons__type {
+  display: flex;
+  align-items: center;
+  .SelectPersons__type__title {
+    color: #fff;
+    font-size: 22px;
+    margin-left: 10px;
+  }
+}

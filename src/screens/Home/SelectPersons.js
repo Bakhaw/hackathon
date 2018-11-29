@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
+import DoubleChevronRight from '../../assets/pictos-layout/double_fleche.png';
+
 import Container from '../../components/Container';
+import Footer from '../../components/Footer';
 import NextButton from '../../components/NextButton';
 
 const baseImgPath = 'src/assets/pictos-layout';
@@ -58,13 +61,17 @@ class SelectPerson extends Component {
 
   render() {
     const { selectedPersons } = this.state;
-    const { handleNext } = this.props;
+    const { handleNext, handlePrev } = this.props;
     {
       /* <h1 className='SelectHobbies__title'>Avec qui ?</h1> */
     }
     return (
       <Container title='Avec qui ?'>
         <div className='SelectHobbies__container'>
+          <div className='SelectPersons__type'>
+            <img className='Button__double-chevron' src={DoubleChevronRight} />
+            <p className='SelectPersons__type__title'>JE CHOISIS</p>
+          </div>
           <div className='Hobbies__container'>
             {Persons.map((person, index) => {
               const { img, text } = person;
@@ -80,9 +87,10 @@ class SelectPerson extends Component {
             })}
           </div>
 
-          <div className='Hobbies__chevron-right__container'>
+          <Footer chevronLeft chevronRight handleNext={handleNext} handlePrev={handlePrev} />
+          {/* <div className='Hobbies__chevron-right__container'>
             <NextButton onClick={handleNext} />
-          </div>
+          </div> */}
         </div>
       </Container>
     );
