@@ -1,0 +1,96 @@
+.Home__container {
+  text-align: center;
+}
+
+.Form__container {
+  width: 75%;
+  margin: auto;
+  padding: 20px;
+  .Form__custom__row {
+    display: grid;
+    grid-template-columns: repeat(2, calc((100% / 2) - 5px));
+    grid-gap: 0 10px;
+  }
+  .Form__choose-sex {
+    display: flex;
+    justify-content: space-around;
+  }
+  .Form__chevron-right__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.SelectActivities__container {
+  text-align: center;
+  padding: 20px 40px;
+  .SelectActivities__title {
+    color: white;
+    font-family: $pacifico;
+    font-weight: normal;
+  }
+  .Activities__chevron-right__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.Activities__container {
+  background: $white;
+  border-radius: 5px;
+  padding: 20px 0;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 30vw);
+  grid-gap: 20px 0;
+  justify-content: center;
+  .Activity__card__container {
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+    p {
+      margin: 0;
+    }
+    .Activity__card__box {
+      cursor: pointer;
+      border-radius: 50%;
+      width: 100px;
+      height: auto;
+      margin: auto;
+    }
+    .Activity__card__image {
+      width: 70px;
+      height: 70px;
+    }
+    .Activity__card__image__active {
+      border: 10px solid $bluegreen;
+      border-radius: 50%;
+    }
+  }
+}
+
+.SubmitRegistration {
+  .SubmitRegistration__title {
+    color: $white;
+    text-align: center;
+    font-family: $pacifico;
+    font-weight: normal;
+    font-size: 40px;
+  }
+  .SubmitRegistration__bulle-chat {
+    position: absolute;
+    transform: translate(-100px, -130px);
+    width: 300px;
+    height: 300px;
+  }
+  .SubmitRegistration__avatar {
+    display: flex;
+    justify-content: flex-start;
+    img {
+      border: 10px solid $purple;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+    }
+  }
+}

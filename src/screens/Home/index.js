@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
+
 import Header from '../../components/Header';
+import SelectActivty from '../Home/SelectActivity';
+import SelectPersonMode from '../Home/SelectPersonMode';
+import SelectPerson from '../Home/SelectPerson';
+import Random from '../Home/Random';
 
 class Home extends Component {
   state = {
@@ -14,10 +19,27 @@ class Home extends Component {
     this.setState(state => ({ step: state.step - 1 }));
   };
 
+  handleSelectPerson = () => {
+    this.setState({ step: 3 });
+  }
+
+  handleRandom = () => {
+    this.setState({ step: 4 });
+  }
+
+
   render() {
+    const { step } = this.state;
     return (
       <div>
         <Header title='Tu veux faire quoi ?' />
+        {step === 1 && <SelectActivty handleNext={this.handleNext} />}
+        {step === 2 && <SelectPersonMode 
+          handleSelectPerson={this.handleSelectPerson}
+          handleRandom={this.handleRandom} 
+        />}
+        {step === 3 && <SelectPerson handleNext={this.handleNext} />}
+        {step === 4 && <Random handleNext={this.handleNext} />}
       </div>
     );
   }
