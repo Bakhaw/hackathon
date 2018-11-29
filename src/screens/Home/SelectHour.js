@@ -25,7 +25,7 @@ function SelectHour({ handleNext, handlePrev }) {
           <option>{date4}</option>
         </select>
       </div>
-      <Footer chevronLeft chevronRight handleNext={handleNext} handlePrev={handlePrev} />
+      <Footer chevronLeft handleNext={handleNext} handlePrev={handlePrev} />
     </Container>
   );
 }

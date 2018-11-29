@@ -39,8 +39,8 @@ class Home extends Component {
         <UserHeader />
         {step === 1 && <SelectActivty handleNext={this.handleNext} />}
         {step === 2 && <SelectPersonMode handleSelectPerson={this.handleSelectPerson} handleRandom={this.handleRandom} />}
-        {step === 4 && <SelectPersons handleNext={this.handleSelectHour} handlePrev={this.handlePrev} />}
-        {/* {step === 4 && <Random handleNext={this.handleNext} />} */}
+        {step === 3 && <SelectPersons handleNext={this.handleSelectHour} handlePrev={this.handlePrev} />}
+        {step === 4 && <Random handleNext={this.handleNext} />}
         {step === 5 && <SelectHour handleNext={this.handleNext} handlePrev={this.handlePrev} />}
       </div>
     );
