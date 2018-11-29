@@ -24,6 +24,7 @@
 .SelectActivities__container {
   text-align: center;
   padding: 20px 40px;
+  background-color: $grey;
   .SelectActivities__title {
     color: white;
     font-family: $pacifico;
@@ -38,12 +39,11 @@
 .Activities__container {
   background: $white;
   border-radius: 5px;
-  padding: 20px 0;
-  margin: 20px 0;
-  display: grid;
-  grid-template-columns: repeat(3, 30vw);
-  grid-gap: 20px 0;
+  padding: 10px;
+  margin: 20px 0; 
+  display: flex;
   justify-content: center;
+  flex-flow: column nowrap; 
   .Activity__card__container {
     height: 100%;
     width: 100%;
@@ -54,17 +54,23 @@
     .Activity__card__box {
       cursor: pointer;
       border-radius: 50%;
-      width: 100px;
       height: auto;
       margin: auto;
+      display: flex;
+      align-items: center;
     }
     .Activity__card__image {
       width: 70px;
       height: 70px;
+      margin: 5px 20px;
     }
     .Activity__card__image__active {
       border: 10px solid $bluegreen;
       border-radius: 50%;
+    }
+    .Activity__card__text {
+      color: $grey;
+      font-size: 20px;
     }
   }
 }
@@ -103,4 +109,35 @@
     font-size: 22px;
     margin-left: 10px;
   }
+}
+
+.SelectMode__container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.random__button {
+  background-color: #fff;
+  min-width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  border-radius: 15px;
+  background: #fff;
+  color: $grey;
+  padding: 12px 15px;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 10px;
+  p {
+    margin: 0;
+  }
+}
+
+.selectPerson__button {
+  background: $bluegreen;
+
 }
