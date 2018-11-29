@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Button from '../../components/Button';
+import Container from '../../components/Container';
 
 class SelectPersonMode extends Component {
 
   render() {
     const { handleRandom, handleSelectPerson } = this.props;
     return (
-      <div className='SelectPersonMode__container'>
+      <Container title='Avec qui ?'>
         <Button
           onClick={handleRandom}
           className='SelectPersonMode__button'
@@ -17,7 +18,7 @@ class SelectPersonMode extends Component {
           className='SelectPersonMode__button'
           text='JE CHOISIS'
         />
-      </div>
+      </Container>
     );
   }
 }

@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import Button from '../../components/Button';
+import Container from '../../components/Container';
 
-const baseImgPath = 'src/assets/icones-hobbies';
+const baseImgPath = 'src/assets/icones-activities';
 
 const Activities = [
   {
-    img: `${baseImgPath}/voyage.png`,
-    text: 'prendre un café'
+    img: `${baseImgPath}/cafe.png`,
+    text: 'Prendre un café'
   },
   {
-    img: `${baseImgPath}/lecture.png`,
-    text: 'prendre l\'air'
+    img: `${baseImgPath}/air.png`,
+    text: 'Prendre l\'air'
   },
   {
-    img: `${baseImgPath}/cuisine.png`,
-    text: 'pause déjeuner'
+    img: `${baseImgPath}/dej.png`,
+    text: 'Pause déjeuner'
   },
 ];
 
@@ -31,34 +32,31 @@ class SelectActivity extends Component {
     const { selectedActivity } = this.state;
     const { handleNext } = this.props;
     return (
-      <div className='SelectActivity__container'>
-        <div className='Activity__container'>
-          {Activities.map((activity, index) => {
-            const { img, text } = activity;
-            const isSelected = selectedActivity === activity.text;
-            return (
-              <div
+      <div className='SelectActivities__container'>
+        <Container title='Tu veux faire quoi?'>
+          <div className='Activities__container'>
+            {Activities.map((activity, index) => {
+              const { img, text } = activity;
+              const isSelected = selectedActivity === activity.text;
+              return (
+                <div
                 className={`Activity__card__container`}
                 key={index}
                 onClick={() => this.handleSelectActivity(activity)}
-              >
-                <div
-                  className={`Activity__card__box ${
-                    isSelected ? 'Activity__card__box__active' : ''
-                  }`}
                 >
-                  <img className='Activity__card__image' src={img} />
-                  <p>{text}</p>
+                  <div
+                    className={`Activity__card__box ${
+                      isSelected ? 'Activity__card__box__active' : ''
+                    }`}
+                    >
+                    <img className='Activity__card__image' src={img} />
+                    <p className='Activity__card__text'>{text}</p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-        <Button
-          className='SelectActivity__submit__button'
-          onClick={handleNext}
-          text='Suivant'
-        />
+              );
+            })}
+          </div>
+        </Container>
       </div>
     );
   }
